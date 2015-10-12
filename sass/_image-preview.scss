@@ -1,0 +1,45 @@
+$preview-width: 300px;
+$image-width: $preview-width * 1.5;
+
+.image-preview {
+	display: inline-block;
+	width: $preview-width;
+	height: $preview-width;
+	margin-bottom: -5px;
+	overflow: hidden;
+	position: relative;
+	background-color: black;
+
+	.inset {
+		position: absolute;
+		bottom: 5px;
+		left: 0px;
+		width: 100%;
+		background-color: white;
+		text-align: center;
+		opacity: 0.7;
+	}
+
+	.glyphicon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 50px;
+		opacity: 0.5;
+		color: white;
+	}
+
+	img {
+		// width: $preview-width;
+		// height: $preview-width;
+		position: relative;
+		width: $image-width;
+		left: ($preview-width - $image-width)/2; 
+	}
+	video {
+		width: $preview-width;
+		height: $preview-width;
+	}
+
+}
