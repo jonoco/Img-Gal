@@ -1,0 +1,41 @@
+.comment-box {
+	overflow: hidden;
+
+	li .btn {
+		display: block;
+		margin: 1px 2px;
+		padding: 0;
+	}
+
+	.comment {
+		overflow: hidden;
+		position: relative;
+		padding: 10px 10px 3px 10px;
+		animation: slidein .3s ease-in;
+		border-top: none;
+		border-bottom: none;
+		border-right: none;	
+	
+		.children {
+			margin-left: 15px;		
+		}
+
+		&:hover {
+			background-color: rgba(245, 245, 250, 0.9);
+		}
+
+		@keyframes slidein {
+			0% {
+				top: -100px;
+				opacity: 0;
+			}
+			50% { 
+				opacity: 0; 
+			}
+			100% {
+				top: 0px;
+				opacity: 1;
+			}
+		}
+	}
+}
