@@ -35,7 +35,7 @@ module.exports = React.createClass({
 	},
 	render: function() {
 		return <div className='topic'>
-			<div className='nav container-fluid'>
+			<div className='navi'>
 				<button className='last' onClick={this.onClickLast}>&lt;&lt;</button>
 				<button className='next' onClick={this.onClickNext}>next</button>
 			</div>
@@ -48,7 +48,9 @@ module.exports = React.createClass({
 		});
 	},
 	handleScroll: function() {
-		var nav = document.querySelector('.topic .nav');
+		var nav = document.querySelector('.topic .navi');
+		if (!nav) {return}
+
 		var top = nav.getBoundingClientRect().top;
 		//console.log(window.scrollY + ' : ' + top);
 

@@ -14,7 +14,7 @@ module.exports = React.createClass({
 			onMouseEnter={this.handleMouseEnter}
 			onMouseLeave={this.handleMouseLeave}
 			className='image-preview'
-			> 
+			>
 			{this.props.animated && this.state.hover ? this.video() : this.image() }
 			{this.props.animated && !this.state.hover ? this.icon() : null }
 			{this.state.hover ? this.inset() : null }
