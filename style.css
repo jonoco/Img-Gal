@@ -1,0 +1,106 @@
+.header .active {
+  font-weight: 900; }
+
+.image-preview {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  margin-bottom: -5px;
+  overflow: hidden;
+  position: relative;
+  background-color: black; }
+  .image-preview .inset {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+    text-align: center;
+    opacity: 0.7; }
+  .image-preview .glyphicon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    opacity: 0.5;
+    color: white; }
+  .image-preview img {
+    position: relative;
+    width: 300px; }
+  .image-preview video {
+    width: 300px;
+    max-height: 300px; }
+
+.topic {
+  text-align: center; }
+  .topic .fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; }
+  .topic .navi {
+    z-index: 2;
+    background-color: #1a1a1a;
+    height: 60px;
+    width: 60vw;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 5px 0 5px 0; }
+    .topic .navi .btn {
+      transition: all .3s ease;
+      height: 40px;
+      color: white;
+      font-size: 1.2em;
+      width: 80px;
+      border: none;
+      margin-right: 8px;
+      background-color: rgba(50, 120, 160, 0.8); }
+      .topic .navi .btn:hover {
+        background-color: rgba(50, 70, 160, 0.8); }
+  .topic .image-preview {
+    animation: fadein 0.65s ease-out; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.image-detail .panel-body {
+  text-align: center; }
+
+.image-detail img, .image-detail video {
+  max-width: 100%; }
+
+.comment-box {
+  overflow: hidden; }
+  .comment-box li .btn {
+    display: block;
+    margin: 1px 2px;
+    padding: 0; }
+  .comment-box .comment {
+    overflow: hidden;
+    position: relative;
+    padding: 10px 10px 3px 10px;
+    animation: slidein .3s ease-in;
+    border-top: none;
+    border-bottom: none;
+    border-right: none; }
+    .comment-box .comment .children {
+      margin-left: 15px; }
+    .comment-box .comment:hover {
+      background-color: rgba(245, 245, 250, 0.9); }
+
+@keyframes slidein {
+  0% {
+    top: -100px;
+    opacity: 0; }
+  50% {
+    opacity: 0; }
+  100% {
+    top: 0px;
+    opacity: 1; } }
+
+body {
+  background-color: #2c2c2c; }

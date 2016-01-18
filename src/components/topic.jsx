@@ -36,8 +36,8 @@ module.exports = React.createClass({
 	render: function() {
 		return <div className='topic'>
 			<div className='navi'>
-				<button className='last' onClick={this.onClickLast}>&lt;&lt;</button>
-				<button className='next' onClick={this.onClickNext}>next</button>
+				<button className='btn' onClick={this.onClickLast}>back</button>
+				<button className='btn' onClick={this.onClickNext}>next</button>
 			</div>
 			{this.renderImages()}
 		</div>
@@ -52,7 +52,6 @@ module.exports = React.createClass({
 		if (!nav) {return}
 
 		var top = nav.getBoundingClientRect().top;
-		//console.log(window.scrollY + ' : ' + top);
 
 		if (window.scrollY < 30) {nav.classList.remove('fixed')}
 		else if (top <= 0) {nav.classList.add('fixed')}
