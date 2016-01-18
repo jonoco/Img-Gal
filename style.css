@@ -36,27 +36,28 @@
   text-align: center; }
   .topic .fixed {
     position: fixed;
-    top: 0; }
+    top: 0;
+    left: 0;
+    right: 0; }
   .topic .navi {
     z-index: 2;
     background-color: #1a1a1a;
     height: 60px;
-    width: 90%;
+    width: 60vw;
     padding: 10px;
     margin: 0 auto;
     border-radius: 5px 0 5px 0; }
-    .topic .navi button {
+    .topic .navi .btn {
+      transition: all .3s ease;
       height: 40px;
       color: white;
-      font-size: 1.2em; }
-    .topic .navi .next {
+      font-size: 1.2em;
       width: 80px;
       border: none;
+      margin-right: 8px;
       background-color: rgba(50, 120, 160, 0.8); }
-    .topic .navi .last {
-      width: 60px;
-      border: 1px solid #1414dc;
-      background-color: black; }
+      .topic .navi .btn:hover {
+        background-color: rgba(50, 70, 160, 0.8); }
   .topic .image-preview {
     animation: fadein 0.65s ease-out; }
 
@@ -82,7 +83,7 @@
     overflow: hidden;
     position: relative;
     padding: 10px 10px 3px 10px;
-    animation: slidein 0.3s ease-in;
+    animation: slidein .3s ease-in;
     border-top: none;
     border-bottom: none;
     border-right: none; }
