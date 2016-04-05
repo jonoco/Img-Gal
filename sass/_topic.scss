@@ -1,5 +1,6 @@
 .topic {
 	text-align: center;
+	background-color: #f1f1f1;
 	
 	.fixed {
 		position: fixed;
@@ -10,9 +11,8 @@
 
 	.navi {
 		z-index: 2;
-		background-color: hsl(0, 0%, 10%);
+		background-color: hsla(0, 0%, 90%, .7);
 		height: 60px;
-		width: 60vw;
 		padding: 10px;
 		margin: 0 auto;
 		border-radius: 5px 0 5px 0;
@@ -23,7 +23,7 @@
 			font-size: 1.2em;
 			width: 80px;
 			border: none;
-			margin-right: 8px;
+			margin-right: 16px;
 			background-color: rgba(50,120,160,0.8);
 			&:hover {
 				background-color: rgba(50,70,160,0.8);

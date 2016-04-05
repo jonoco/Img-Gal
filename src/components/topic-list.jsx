@@ -7,8 +7,7 @@ var Link = ReactRouter.Link;
 
 module.exports = React.createClass({
 	render: function() {
-		return <div className='list-group'>
-			Topic List
+		return <div className='list-group topic-list'>
 			{this.renderTopics()}
 		</div>
 	},
@@ -24,7 +23,7 @@ module.exports = React.createClass({
 		Actions.getTopics(); // posts 'getTopics' event message
 	},
 	renderTopics: function() {
-		return this.state.topics.slice(0, 4).map(function(topic) {
+		return this.state.topics.slice(0, 5).map(function(topic) {
 			return <Link to={'topics/' + topic.id} className='list-group-item' key={topic.id}>
 				<h4>{topic.name}</h4>
 				<p>{topic.description}</p>

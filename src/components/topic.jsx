@@ -17,20 +17,14 @@ module.exports = React.createClass({
 	},
 	componentWillMount: function() {
 		Actions.getImages(this.props.params.id);
-		// Actions.getImages(this.props.params.id + '/viral/' + this.state.page);
 	},
 	componentDidMount: function() {
-		// var scroll = _.debounce(function() {
-		// 	console.log('scrollin');
-		// }, 50);
 		window.addEventListener('scroll', this.handleScroll);
 	},
 	componentWillReceiveProps: function(nextProps) {
 		Actions.getImages(nextProps.params.id);
-		// Actions.getImages(nextProps.params.id + '/viral/' + this.state.page);
 	},
 	componentDidUpdate: function() {
-		console.log('updating');
 		window.scroll(0,0);
 	},
 	render: function() {

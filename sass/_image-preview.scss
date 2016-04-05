@@ -4,7 +4,8 @@ $preview-width: 300px;
 	display: inline-block;
 	width: $preview-width;
 	height: $preview-width;
-	margin-bottom: -5px;
+	// margin-bottom: -5px;
+	margin: 5px;
 	overflow: hidden;
 	position: relative;
 	background-color: black;
@@ -30,12 +31,17 @@ $preview-width: 300px;
 	}
 
 	img {
-		position: relative;
+		position: absolute;
+		top:50%;
+		transform: translate(-50%, -50%);
 		width: $preview-width;
 	}
 	video {
+		position: absolute;
+		top:50%;
+		transform: translate(-50%, -50%);
 		width: $preview-width;
-		max-height: $preview-width;
+		// max-height: $preview-width;
 	}
 
 }
