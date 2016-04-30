@@ -9,6 +9,9 @@ var server = require('gulp-server-livereload');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
+var buffer = require('vinyl-buffer');
 
 var notify = function(error) {
   var message = 'In: ';
@@ -45,8 +48,12 @@ var bundler = watchify(browserify({
 function bundle() {
   return bundler
     .bundle()
-    .on('error', notify)
     .pipe(source('main.js'))
+    .pipe(buffer())
+    .on('error', notify)
+    .pipe(sourcemaps.init())
+      .pipe(uglify())
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
 }
 bundler.on('update', bundle)
